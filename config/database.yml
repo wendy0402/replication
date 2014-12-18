@@ -1,0 +1,4 @@
+local:
+  adapter: sqlite3
+  database: "db/replication.sqlite3"
+  verbosity: 'quiet'

@@ -1,0 +1,17 @@
+{
+  "name": "replication",
+  "version": "0.0.1",
+  "authors": [
+    "wendy0402 <wendykurniawan92@gmail.com>"
+  ],
+  "description": "simple sinatra apps for replicate bugs in kaminari",
+  "main": "./replication.rb",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

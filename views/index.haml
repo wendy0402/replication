@@ -1,1 +1,10 @@
-TES
+%table.neat
+  %thead
+    %tr
+      %th Id
+      %th Message
+  %tbody
+    - @histories.each do |history|
+      %tr
+        %td= history.id
+        %td= history.message

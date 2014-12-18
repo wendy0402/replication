@@ -1,10 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    actionmailer (4.1.8)
-      actionpack (= 4.1.8)
-      actionview (= 4.1.8)
-      mail (~> 2.5, >= 2.5.4)
     actionpack (4.1.8)
       actionview (= 4.1.8)
       activesupport (= 4.1.8)
@@ -28,22 +24,22 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
-    backports (3.6.4)
     builder (3.2.2)
     erubis (2.7.0)
-    exception_notification (4.0.1)
-      actionmailer (>= 3.0.4)
-      activesupport (>= 3.0.4)
     haml (4.0.6)
       tilt
     i18n (0.6.11)
-    jsmin (1.0.1)
     json (1.8.1)
-    mail (2.6.3)
-      mime-types (>= 1.16, < 3)
-    mime-types (2.4.3)
+    kaminari (0.16.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     minitest (5.5.0)
-    multi_json (1.10.1)
+    padrino-helpers (0.12.4)
+      i18n (~> 0.6, >= 0.6.7)
+      padrino-support (= 0.12.4)
+      tilt (~> 1.4.1)
+    padrino-support (0.12.4)
+      activesupport (>= 3.1)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
@@ -55,18 +51,6 @@ GEM
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
-    sinatra-assetpack (0.3.3)
-      jsmin
-      rack-test
-      sinatra
-      tilt (>= 1.3.0, < 2.0)
-    sinatra-contrib (1.4.2)
-      backports (>= 2.0)
-      multi_json
-      rack-protection
-      rack-test
-      sinatra (~> 1.4.0)
-      tilt (~> 1.3)
     sqlite3 (1.3.10)
     thread_safe (0.3.4)
     tilt (1.4.1)
@@ -77,14 +61,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  actionmailer
   activerecord
   activesupport
-  exception_notification
   haml
+  kaminari
+  padrino-helpers
   rake
   sass
   sinatra
-  sinatra-assetpack
-  sinatra-contrib
   sqlite3

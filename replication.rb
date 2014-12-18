@@ -1,6 +1,7 @@
+require 'bundler/setup'
 require 'sinatra/base'
-require 'sinatra/assetpack'
-require "sinatra/reloader"
+require 'padrino-helpers'
+require 'kaminari/sinatra'
 require 'haml'
 require 'sass'
 require File.expand_path('../record.rb', __FILE__)
@@ -8,8 +9,7 @@ require File.expand_path('../record.rb', __FILE__)
 Schema.migrate!
 
 class Replication < ::Sinatra::Base
-  register Sinatra::Reloader
-  register Sinatra::AssetPack
+  register Kaminari::Helpers::SinatraHelpers
 
   use ActiveRecord::ConnectionAdapters::ConnectionManagement
   use Rack::MethodOverride
@@ -24,7 +24,7 @@ class Replication < ::Sinatra::Base
     sass :style
   end
   get '/' do
-    @history = History.all
+    @histories = History.order(:id).page(params[:page]).per(5)
     haml :index
   end
 end
